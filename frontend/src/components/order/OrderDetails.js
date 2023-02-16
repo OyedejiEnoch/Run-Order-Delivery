@@ -26,7 +26,8 @@ function OrderDetails() {
     }, [dispatch, error, params.id])
 
 
-    const deliveryDetails = shippingInfo && `${shippingInfo.address}, ${shippingInfo.city}, ${shippingInfo.country}`
+    const deliveryDetails = shippingInfo && `${shippingInfo.address} `
+    const locationDetails = shippingInfo && `${shippingInfo.cafeteria}`
 
     const isPaid = paymentInfo && paymentInfo.status === 'succeeded' ? true : false
     return (
@@ -43,7 +44,8 @@ function OrderDetails() {
                             <h4 className="mb-4">Delivery Info</h4>
                             <p><b>Name:</b>{user && user.name}</p>
                             <p><b>Phone:</b> {shippingInfo && shippingInfo.phoneNo}</p>
-                            <p className="mb-4"><b>Address:</b>{deliveryDetails}</p>
+                            <p className="mb-4"><b>Address:</b> {deliveryDetails}</p>
+                            <p className="mb-4"><b>Cafeteria:</b> {locationDetails}</p>
                             <p><b>Amount:</b> N{totalPrice}</p>
 
                             <hr />

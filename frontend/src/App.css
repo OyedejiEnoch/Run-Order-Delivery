@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
 
 html,
 body {
@@ -8,11 +10,15 @@ body {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    background-color: #f0f0f0;
+    font-family: 'Roboto Slab', serif;
 
 }
 
 :root {
     --nav-color: #2C74B3;
+    --first-color: #0F044C;
+    --second-color: #251749;
 }
 
 /* Scroll Bar */
@@ -34,7 +40,7 @@ body {
 }
 
 nav {
-    background-color: var(--nav-color);
+    background-color: var(--first-color);
     padding: 3rem 1rem;
 }
 
@@ -78,6 +84,57 @@ nav {
     font-size: 0.9rem;
 }
 
+
+
+/* landing page */
+.landing {
+    background-color: #fcfbfa;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto Slab', serif;
+    position: relative;
+
+}
+
+.landingText {
+    margin: auto 0;
+
+}
+
+.landing button {
+    background-color: var(--second-color);
+    outline: none;
+}
+
+.landing button:hover {
+    background-color: white;
+    color: var(--second-color);
+}
+
+.landingText h3 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.landingText h1 {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.landingText p {
+    font-size: 20px;
+}
+
+.landingImage {
+    width: 50%;
+}
+
+.animate__animated.animate__fadeIn {
+    --animate-duration: 3s;
+}
+
+
+
 /* Home page */
 #products_heading {
     margin-top: 1.8rem;
@@ -85,6 +142,7 @@ nav {
 
 .card {
     height: 100%;
+    background-color: #f0f0f0;
 }
 
 .card-title a {
@@ -166,6 +224,11 @@ footer {
     font-size: 0.8rem;
 }
 
+.productDetails h3 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
 #product_price {
     font-size: 2rem;
     font-weight: bold;
@@ -174,14 +237,30 @@ footer {
 #cart_btn,
 #review_btn {
     border-radius: 2rem;
-    background-color: #fa9c23;
+    background-color: #03C988;
     border: none;
     padding: 0.5rem 2rem;
+}
+
+#cart_btn:hover {
+    color: #03C988;
+    background-color: #ffffff;
+
 }
 
 #product_seller {
     color: grey;
     font-size: 0.9rem;
+}
+
+.stockCounter input {
+    margin: 10px;
+}
+
+.stockCounter .plus {
+    margin-right: 10px;
+    background-color: var(--second-color);
+    outline: var(--second-color);
 }
 
 #stock_status {
@@ -243,7 +322,7 @@ footer {
 }
 
 .cart-item a {
-    color: grey;
+    color: rgb(5, 5, 5);
 }
 
 #delete_cart_item {
@@ -255,25 +334,26 @@ footer {
 }
 
 #card_item_price {
-    color: #febd69;
+    color: #03C988;
     font-weight: bold;
     font-size: 1.4rem;
 }
 
 #checkout_btn,
 .review-btn {
-    background-color: #fa9c23;
-    border-color: #fa9c23;
+    background-color: #03C988;
+    border-color: #03C988;
     margin-top: 2rem;
     border-radius: 5rem;
 }
 
 #view_order_details {
-    background-color: #fa9c23;
-    border-color: #fa9c23;
+    background-color: #03C988;
+    border-color: #03C988;
 }
 
 #order_summary {
+    background-color: #edf1f1;
     border: 1px solid #e3e3e3;
     border-radius: 1rem;
     padding: 2rem 1.5rem;
@@ -322,8 +402,8 @@ footer {
 }
 
 .wrapper form .btn {
-    background-color: #fa9c23;
-    border-color: #fa9c23;
+    background-color: #03C988;
+    border-color: #03C988;
     color: white;
     margin-top: 2.5rem;
 }
@@ -402,7 +482,7 @@ footer {
 }
 
 .active-step {
-    background: #fa9c23;
+    background: #03C988;
     color: #fff;
 }
 
@@ -410,7 +490,7 @@ footer {
     float: left;
     width: 0;
     border-top: 20px solid transparent;
-    border-left: 15px solid #fa9c23;
+    border-left: 15px solid #03C988;
     border-bottom: 20px solid transparent;
     margin-left: -1px;
 }
@@ -418,9 +498,9 @@ footer {
 .triangle2-active {
     width: 0;
     float: left;
-    border-top: 20px solid #fa9c23;
+    border-top: 20px solid #03C988;
     border-left: 15px solid #fff;
-    border-bottom: 20px solid #fa9c23;
+    border-bottom: 20px solid #03C988;
     margin-right: -1px;
 }
 
@@ -598,6 +678,10 @@ ul.CTAs a {
     font-size: 1.5rem;
 }
 
+.dashbordBg {
+    background-color: #645CBB;
+}
+
 /* Reviews */
 
 .rating {
@@ -634,4 +718,26 @@ ul.CTAs a {
 .review_user {
     font-size: 0.8rem;
     color: grey;
+}
+
+
+footer {
+    background-color: var(--second-color);
+
+}
+
+.footer {
+    margin-top: 50px;
+    padding: 50px;
+    color: #FFFBEB;
+}
+
+.footer h1 {
+    font-size: 25px;
+    color: white;
+}
+
+.footer a {
+    padding: 5px;
+    color: #FFFBEB;
 }

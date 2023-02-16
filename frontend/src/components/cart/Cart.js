@@ -88,12 +88,12 @@ function Cart() {
                             <hr />
                         </div>
 
-                        <div className="col-12 col-lg-3 my-4">
+                        <div className="col-12 col-lg-3 my-4 orderSummary">
                             <div id="order_summary">
                                 <h4>Order Summary</h4>
                                 <hr />
                                 <p>Subtotal:  <span className="order-summary-values">{cartItems.reduce((acc, item) => (acc + Number(item.quantity)), 0)} (Units)</span></p>
-                                <p>Est. total: <span className="order-summary-values">{cartItems.reduce((acc, item) => (acc + item.quantity * item.price), 0).toFixed(2)}</span></p>
+                                <p>Est. total: <span className="order-summary-values">N {cartItems.reduce((acc, item) => (acc + item.quantity * item.price), 0).toFixed(2)}</span></p>
 
                                 <hr />
                                 <button id="checkout_btn" className="btn btn-primary btn-block" onClick={checkoutHandler}>Check out</button>

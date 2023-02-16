@@ -33,6 +33,6 @@ router.route("/me/update").put(isAunthenticatedUser, updateProfile)
 router.route("/admin/users").get(isAunthenticatedUser, authorizedRoles("admin", "team"), allUsers)
 router.route("/admin/users/:id")
     .get(isAunthenticatedUser, authorizedRoles("admin"), getUserDetails)
-    .put(isAunthenticatedUser, authorizedRoles("admin"), updateUser)
+    .put(isAunthenticatedUser, authorizedRoles("admin",), updateUser)
     .delete(isAunthenticatedUser, authorizedRoles("admin"), deleteUser)
 module.exports = router;

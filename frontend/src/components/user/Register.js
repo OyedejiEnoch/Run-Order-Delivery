@@ -81,7 +81,10 @@ function Register() {
             <MetaData title={'Register User'} />
 
             <div className="row wrapper">
-                <div className="col-10 col-lg-5">
+                <div className="col-lg-6">
+                    <img src="./images/undraw_hello_re_3evm.svg" width="80%" />
+                </div>
+                <div className="col-lg-6 col-lg-5">
                     <form className="shadow-lg" onSubmit={handleSubmit} encType='multipart/form-data'>
                         <h1 className="mb-3">Register</h1>
 

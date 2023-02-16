@@ -72,7 +72,7 @@ function ProductDetails() {
                             </Carousel>
                         </div>
 
-                        <div className="col-12 col-lg-5 mt-5">
+                        <div className="col-12 col-lg-5 mt-5 productDetails">
                             <h3>{product.name}</h3>
                             <p id="product_id">Product # {product._id}</p>
 
@@ -85,7 +85,7 @@ function ProductDetails() {
 
                             <hr />
 
-                            <p id="product_price">${product.price}</p>
+                            <p id="product_price">N{product.price}</p>
                             <div className="stockCounter d-inline">
                                 <span className="btn btn-danger minus" onClick={decreaseQty}>-</span>
 

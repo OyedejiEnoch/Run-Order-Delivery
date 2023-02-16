@@ -33,11 +33,11 @@ function Header() {
                 </div>
 
 
-
-                <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
+                {/* text center */}
+                <div className="col-12 col-md-3 mt-4 mt-md-0 ">
                     <Link to="/cart" style={{ textDecoration: "none" }} >
                         <span id="cart" className="ms-3">Cart</span>
-                        <span className="ms-1" id="cart_count">{cartItems}</span>
+                        <span className="ms-1" id="cart_count">{cartItems?.length}</span>
                     </Link>
 
                     {user ? (

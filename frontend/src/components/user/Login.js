@@ -53,7 +53,10 @@ function Login() {
                     <MetaData title={"Login"} />
 
                     <div className="row wrapper">
-                        <div className="col-10 col-lg-5">
+                        <div className="col-lg-6">
+                            <img src="./images/undraw_access_account_re_8spm.svg" width="80%" />
+                        </div>
+                        <div className="col-lg-6 col-lg-5">
                             <form className="shadow-lg" onSubmit={handleSubmit}>
                                 <h1 className="mb-3">Login</h1>
                                 <div className="form-group">
@@ -80,12 +83,15 @@ function Login() {
 
                                 <Link to="/password/forgot" className="float-right mb-4">Forgot Password?</Link>
 
-                                <button
+                                {/* <button
                                     id="login_button"
                                     type="submit"
                                     className="btn btn-block py-3">
                                     LOGIN
-                                </button>
+                                </button> */}
+                                <div class="d-grid gap-2">
+                                    <button id="login_button" className="btn btn-primary" type="submit">Login</button>
+                                </div>
 
                                 <Link to="/register" className="float-right mt-3">New User?</Link>
                             </form>

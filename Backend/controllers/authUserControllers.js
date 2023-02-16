@@ -195,6 +195,7 @@ exports.updateProfile = catchAsyncErrors(async (req, res, next) => {
 
         const image_id = user.avatar.public_id;
         const res = await cloudinary.v2.uploader.destroy(image_id);
+
         const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
             folder: 'avatars',
             width: 150,
@@ -296,6 +297,9 @@ exports.deleteUser = catchAsyncErrors(async (req, res, next) => {
         return next(new ErrorHandler(`User not found with id: ${req.params.id}`), 500)
     }
     //Remove avatar from Todo
+    const image_id = user.avatar.public_id;
+    await cloudinary.v2.uploader.destroy(image_id);
+
     await user.remove();
 
     res.status(200).json({

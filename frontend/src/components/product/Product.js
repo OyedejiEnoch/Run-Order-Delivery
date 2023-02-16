@@ -1,10 +1,11 @@
 import React, { useEffect, } from "react";
 import { Link } from "react-router-dom"
+import 'animate.css';
 
 
 function Product({ product }) {
     return (
-        <div key={product._id} className="col-sm-12 col-md-6 col-lg-3 my-3">
+        <div key={product._id} className="col-sm-12 col-md-6 col-lg-3 my-3 animate__animated animate__fadeInUp">
             <div className="card p-3 rounded">
                 <img
                     className="card-img-top mx-auto"
@@ -14,13 +15,8 @@ function Product({ product }) {
                     <h5 className="card-title">
                         <Link to={`/product/${product._id}`}>{product.name}</Link>
                     </h5>
-                    <div className="ratings mt-auto">
-                        <div className="rating-outer">
-                            <div className="rating-inner " style={{ width: `${(product.rating / 5) * 100}%` }}></div>
-                        </div>
-                        <span id="no_of_reviews">({product.numOfReviews} Reviews)</span>
-                    </div>
-                    <p className="card-text">{product.price}</p>
+
+                    <p className="card-text">N {product.price}</p>
                     <Link to={`/product/${product._id}`} id="view_btn" className="btn btn-block">View Details</Link>
                 </div>
             </div>

@@ -20,17 +20,17 @@ function Shipping() {
     //change to cafiteria
     const [phoneNo, setPhoneNo] = useState(shippingInfo.phoneNo)
     const [postalCode, setPostalCode] = useState(shippingInfo.postalCode)
-    const [country, setCountry] = useState(shippingInfo.country)
+    const [cafeteria, setCafeteria] = useState(shippingInfo.cafeteria)
 
     const dispatch = useDispatch()
 
     function handleSubmit(e) {
         e.preventDefault()
 
-        dispatch(saveShippingInfo({ address, city, phoneNo, postalCode, country }))
+        dispatch(saveShippingInfo({ address, phoneNo, cafeteria }))
         navigate("/order/confirm")
     }
-
+    // city postalCode
     return (
         <Fragment>
             <MetaData title={"Shipping info"} />
@@ -51,7 +51,7 @@ function Shipping() {
                             />
                         </div>
 
-                        <div className="form-group">
+                        {/* <div className="form-group">
                             <label htmlFor="city_field">City</label>
                             <input
                                 type="text"
@@ -61,7 +61,7 @@ function Shipping() {
                                 onChange={(e) => setCity(e.target.value)}
                                 required
                             />
-                        </div>
+                        </div> */}
 
                         <div className="form-group">
                             <label htmlFor="phone_field">Phone No</label>
@@ -75,7 +75,7 @@ function Shipping() {
                             />
                         </div>
 
-                        <div className="form-group">
+                        {/* <div className="form-group">
                             <label htmlFor="postal_code_field">Postal Code</label>
                             <input
                                 type="number"
@@ -85,23 +85,26 @@ function Shipping() {
                                 onChange={(e) => setPostalCode(e.target.value)}
                                 required
                             />
-                        </div>
+                        </div> */}
 
                         <div className="form-group">
-                            <label htmlFor="country_field">Country</label>
+                            <label htmlFor="country_field">Cafeteria</label>
                             <select
                                 id="country_field"
                                 className="form-control"
-                                value={country}
-                                onChange={(e) => setCountry(e.target.value)}
+                                value={cafeteria}
+                                onChange={(e) => setCafeteria(e.target.value)}
                                 required
                             >
 
-                                {countriesList.map(country => (
-                                    <option key={country.name} value={country.name}>
-                                        {country.name}
-                                    </option>
-                                ))}
+
+                                <option >Select.. </option>
+                                <option >Manner Palace </option>
+                                <option >Double Portion </option>
+                                <option >National Kitchen</option>
+                                <option >Mimies</option>
+                                <option >Divine Hands</option>
+
 
                             </select>
                         </div>
